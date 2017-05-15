@@ -1,0 +1,33 @@
+﻿<Window x:Class="proyPractsDds.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyPractsDds"
+        mc:Ignorable="d"
+        Title="Command Manager" Height="539.216" Width="511.275">
+    <Grid>
+        <Button x:Name="B6" Content=" " HorizontalAlignment="Left" Margin="170,61,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="B7" Content=" " HorizontalAlignment="Left" Margin="170,86,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="B8" Content=" " HorizontalAlignment="Left" Margin="170,111,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="B9" Content=" " HorizontalAlignment="Left" Margin="250,61,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="B10" Content=" " HorizontalAlignment="Left" Margin="250,86,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="B11" Content=" " HorizontalAlignment="Left" Margin="250,111,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="CBstrategy" HorizontalAlignment="Left" Margin="330,36,0,0" VerticalAlignment="Top" Width="92" Height="20" SelectionChanged="CBstrategy_SelectionChanged"/>
+        <Button x:Name="Bexecute" Content="Execute" HorizontalAlignment="Left" Margin="330,61,0,0" VerticalAlignment="Top" Width="92" Height="45" Click="Bexecute_Click"  IsEnabled="{Binding ElementName=LBCommands, Path=SelectedItems.Count}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="112,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="TBResult" HorizontalAlignment="Left" Height="362" Margin="10,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="485"/>
+        <TextBox x:Name="TBargument" HorizontalAlignment="Left" Height="21" Margin="170,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" TextChanged="TBargument_TextChanged"/>
+        <Label Content="Command:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelArgument" Content="Argument:" HorizontalAlignment="Left" Margin="170,9,0,0" VerticalAlignment="Top"/>
+        <Label Content="Return Strategy" HorizontalAlignment="Left" Margin="330,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Bclear" Content="Clear" HorizontalAlignment="Left" Margin="330,111,0,0" VerticalAlignment="Top" Width="92" Height="20" Click="Bclear_Click"/>
+        <CheckBox x:Name="rb1" Content="1: alive" HorizontalAlignment="Left" Margin="427,39,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Height="18" />
+        <CheckBox x:Name="rb2" Content="2: dead" HorizontalAlignment="Left" Margin="427,64,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Height="18"/>
+        <CheckBox x:Name="rb3" Content="3: dead" HorizontalAlignment="Left" Margin="427,88,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Height="18"/>
+        <CheckBox x:Name="rb4" Content="4: dead" HorizontalAlignment="Left" Margin="427,113,0,0" VerticalAlignment="Top" Width="80" IsEnabled="False" Height="18"/>
+        <Label Content="thread" HorizontalAlignment="Left" Margin="439,13,0,0" VerticalAlignment="Top" Width="56"/>
+        <ListBox x:Name="LBCommands" HorizontalAlignment="Left" Height="96" Margin="10,35,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="LBCommands_SelectionChanged"/>
+
+    </Grid>
+</Window>
