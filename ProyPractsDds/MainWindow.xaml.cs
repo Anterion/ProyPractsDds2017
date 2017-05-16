@@ -25,7 +25,7 @@ namespace proyPractsDds
         private BindingList<string> _Commands;
         private BindingList<string> _Strategies;
         private string arg; 
-        private readonly BackgroundWorker[] Worker = //BACKGROUNDWORKER OBJECT POOL
+        private readonly BackgroundWorker[] Worker = //BACKGROUNDWORKER OBJECT POOL //prueba para github
         {
             new BackgroundWorker(),
             new BackgroundWorker(),
